@@ -12,6 +12,7 @@
 		6BA6366F221C8F9E0000FB86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA6366D221C8F9E0000FB86 /* Main.storyboard */; };
 		6BA63671221C8FA00000FB86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA63670221C8FA00000FB86 /* Assets.xcassets */; };
 		6BA63674221C8FA00000FB86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA63672221C8FA00000FB86 /* LaunchScreen.storyboard */; };
+		AAC1D245221FF4A800120FFE /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D244221FF4A800120FFE /* Guess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6BA63670221C8FA00000FB86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BA63673221C8FA00000FB86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BA63675221C8FA00000FB86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC1D244221FF4A800120FFE /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,20 +56,13 @@
 		6BA63668221C8F9E0000FB86 /* Hangman */ = {
 			isa = PBXGroup;
 			children = (
-				6BA6367B221C90F00000FB86 /* Model */,
+				AAC1D243221FF49D00120FFE /* Model */,
 				6BA6367C221C90F40000FB86 /* View */,
 				6BA6367D221C91090000FB86 /* Controller */,
 				6BA6367E221C912C0000FB86 /* Supporting Files */,
 				6BA63675221C8FA00000FB86 /* Info.plist */,
 			);
 			path = Hangman;
-			sourceTree = "<group>";
-		};
-		6BA6367B221C90F00000FB86 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		6BA6367C221C90F40000FB86 /* View */ = {
@@ -94,6 +89,14 @@
 				6BA63670221C8FA00000FB86 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAC1D243221FF49D00120FFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAC1D244221FF4A800120FFE /* Guess.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +172,7 @@
 			files = (
 				6BA6366C221C8F9E0000FB86 /* HangmanViewController.swift in Sources */,
 				6BA6366A221C8F9E0000FB86 /* AppDelegate.swift in Sources */,
+				AAC1D245221FF4A800120FFE /* Guess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
