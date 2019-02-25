@@ -19,7 +19,7 @@ class HangmanViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guess = Guess(phrase: "sicko mode")
+        guess = Guess()
         progressLabel.text = guess?.getProgressString()
     }
     
@@ -43,7 +43,7 @@ class HangmanViewController: UIViewController {
                             let alert = UIAlertController(title: "You Lost!", message: "Would you like to try again?", preferredStyle: .alert)
                             
                             alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-                                self.guess = Guess(phrase: "wheres the money lebowski")
+                                self.guess = Guess()
                                 self.progressLabel.text = self.guess?.getProgressString()
                                 self.hangmanImage.image = #imageLiteral(resourceName: "hangman0")
                                 self.incorrectGuessesLabel.text = self.guess?.getIncorrectGuesses()
@@ -60,12 +60,6 @@ class HangmanViewController: UIViewController {
         }
         // Reset text field after guess is registered
         guessField.text = ""
-    }
-    
-    @IBAction func restartButtonPressed(_ sender: UIButton) {
-        guess = Guess(phrase: "live sheck wes")
-        progressLabel.text = guess?.getProgressString()
-        incorrectGuessesLabel.text = guess?.getIncorrectGuesses()
     }
 }
 

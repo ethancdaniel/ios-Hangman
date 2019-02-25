@@ -13,6 +13,7 @@
 		6BA63671221C8FA00000FB86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BA63670221C8FA00000FB86 /* Assets.xcassets */; };
 		6BA63674221C8FA00000FB86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BA63672221C8FA00000FB86 /* LaunchScreen.storyboard */; };
 		AAC1D245221FF4A800120FFE /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D244221FF4A800120FFE /* Guess.swift */; };
+		AAE144D222237E4A003752AD /* phrases.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAE144D122237E4A003752AD /* phrases.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6BA63673221C8FA00000FB86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BA63675221C8FA00000FB86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAC1D244221FF4A800120FFE /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
+		AAE144D122237E4A003752AD /* phrases.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = phrases.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				AAC1D244221FF4A800120FFE /* Guess.swift */,
+				AAE144D122237E4A003752AD /* phrases.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BA63674221C8FA00000FB86 /* LaunchScreen.storyboard in Resources */,
+				AAE144D222237E4A003752AD /* phrases.plist in Resources */,
 				6BA63671221C8FA00000FB86 /* Assets.xcassets in Resources */,
 				6BA6366F221C8F9E0000FB86 /* Main.storyboard in Resources */,
 			);
