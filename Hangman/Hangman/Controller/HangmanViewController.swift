@@ -16,7 +16,6 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var guessField: UITextField!
     
     var guess: Guess?
-    var incorrectIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +26,20 @@ class HangmanViewController: UIViewController {
     @IBAction func guessButtonPressed(_ sender: UIButton) {
         // Will only run if exactly one character is in the text field
         if let letter = guessField.text {
+            let incorrectGuessesBefore = guess?.incorrectGuesses.count
             if letter.count == 1 {
                 let notGuessed = guess?.registerGuess(guess: Character(letter))
                 incorrectGuessesLabel.text = guess?.getIncorrectGuesses()
                 if notGuessed! {
-                    progressLabel.text = guess?.getProgressString()
+                    let incorrectGuessesAfter = guess?.incorrectGuesses.count
+                    if (incorrectGuessesBefore == incorrectGuessesAfter) {
+                        progressLabel.text = guess?.getProgressString()
+                    } else {
+                        hangmanImage.image = UIImage(named: "hangman" + String(incorrectGuessesAfter!))
+                    }
                 } else {
-                    incorrectIndex += 1
                     // TODO
-                    // update hangman image
+                    // tell user that they already guessed this letter
                 }
             }
         }

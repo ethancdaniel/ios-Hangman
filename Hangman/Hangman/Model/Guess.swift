@@ -38,15 +38,14 @@ class Guess {
     }
     
     // Returns true if successful and false if user already guessed the letter
-    func registerGuess(guess: Character) -> Bool{
+    func registerGuess(guess: Character) -> Bool {
         if let index = notYetGuessed.index(of: guess) {
             if (!phrase.contains(guess)) {
                 incorrectGuesses.append(guess)
             }
             notYetGuessed.remove(at: index)
             return true
-        } else {
-            return false
         }
+        return false
     }
 }
