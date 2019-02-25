@@ -18,25 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vD-TP-SsV" userLabel="Header ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="42"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsU-1e-JU8">
-                                        <rect key="frame" x="309" y="0.0" width="50" height="30"/>
-                                        <state key="normal" title="Restart"/>
-                                        <connections>
-                                            <action selector="restartButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IFW-sg-dN1"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="jsU-1e-JU8" secondAttribute="trailing" constant="16" id="Nwb-o4-bMl"/>
-                                    <constraint firstItem="jsU-1e-JU8" firstAttribute="top" secondItem="6vD-TP-SsV" secondAttribute="top" id="QBf-jq-Wtq"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LqM-OQ-NND">
-                                <rect key="frame" x="0.0" y="70" width="375" height="306"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LqM-OQ-NND">
+                                <rect key="frame" x="0.0" y="20" width="375" height="306"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangman0" translatesAutoresizingMaskIntoConstraints="NO" id="rz5-u0-Kpe">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
@@ -71,15 +54,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6vD-TP-SsV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DSn-X7-ekz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6vD-TP-SsV" secondAttribute="trailing" id="MDE-hb-v8d"/>
-                            <constraint firstItem="6vD-TP-SsV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P7e-Od-x16"/>
                             <constraint firstItem="LqM-OQ-NND" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rc8-L2-pdI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LqM-OQ-NND" secondAttribute="trailing" id="bQx-M0-LCL"/>
                             <constraint firstItem="LqM-OQ-NND" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bVQ-Ir-3gk"/>
-                            <constraint firstItem="LqM-OQ-NND" firstAttribute="top" secondItem="6vD-TP-SsV" secondAttribute="bottom" constant="8" id="ca7-qb-6eM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LqM-OQ-NND" secondAttribute="bottom" constant="291" id="iex-FE-NFY"/>
-                            <constraint firstItem="6vD-TP-SsV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tCm-Db-l78"/>
+                            <constraint firstItem="LqM-OQ-NND" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ugs-Jz-XuO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

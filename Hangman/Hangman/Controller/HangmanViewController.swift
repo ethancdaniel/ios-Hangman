@@ -27,15 +27,30 @@ class HangmanViewController: UIViewController {
         // Will only run if exactly one character is in the text field
         if let letter = guessField.text {
             let incorrectGuessesBefore = guess?.incorrectGuesses.count
+            
             if letter.count == 1 {
                 let notGuessed = guess?.registerGuess(guess: Character(letter))
                 incorrectGuessesLabel.text = guess?.getIncorrectGuesses()
+                
                 if notGuessed! {
                     let incorrectGuessesAfter = guess?.incorrectGuesses.count
-                    if (incorrectGuessesBefore == incorrectGuessesAfter) {
+                    
+                    if incorrectGuessesBefore == incorrectGuessesAfter {
                         progressLabel.text = guess?.getProgressString()
                     } else {
                         hangmanImage.image = UIImage(named: "hangman" + String(incorrectGuessesAfter!))
+                        if incorrectGuessesAfter == 6 {
+                            let alert = UIAlertController(title: "You Lost!", message: "Would you like to try again?", preferredStyle: .alert)
+                            
+                            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                                self.guess = Guess(phrase: "wheres the money lebowski")
+                                self.progressLabel.text = self.guess?.getProgressString()
+                                self.hangmanImage.image = #imageLiteral(resourceName: "hangman0")
+                                self.incorrectGuessesLabel.text = self.guess?.getIncorrectGuesses()
+                            }))
+                            
+                            self.present(alert, animated: true)
+                        }
                     }
                 } else {
                     // TODO
