@@ -19,8 +19,7 @@ class HangmanViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guess = Guess()
-        progressLabel.text = guess?.getProgressString()
+        startNewGame()
     }
     
     @IBAction func guessButtonPressed(_ sender: UIButton) {
@@ -37,18 +36,21 @@ class HangmanViewController: UIViewController {
                     
                     if incorrectGuessesBefore == incorrectGuessesAfter {
                         progressLabel.text = guess?.getProgressString()
+                        
+                        if guess?.getProgressString() == guess?.phrase {
+                            let alert = UIAlertController(title: "You Won!", message: "Would you like to play again?", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                                self.startNewGame()
+                            }))
+                            self.present(alert, animated: true)
+                        }
                     } else {
                         hangmanImage.image = UIImage(named: "hangman" + String(incorrectGuessesAfter!))
                         if incorrectGuessesAfter == 6 {
-                            let alert = UIAlertController(title: "You Lost!", message: "Would you like to try again?", preferredStyle: .alert)
-                            
+                            let alert = UIAlertController(title: "You Lost!", message: "Would you like to play again?", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-                                self.guess = Guess()
-                                self.progressLabel.text = self.guess?.getProgressString()
-                                self.hangmanImage.image = #imageLiteral(resourceName: "hangman0")
-                                self.incorrectGuessesLabel.text = self.guess?.getIncorrectGuesses()
+                                self.startNewGame()
                             }))
-                            
                             self.present(alert, animated: true)
                         }
                     }
@@ -60,6 +62,15 @@ class HangmanViewController: UIViewController {
         }
         // Reset text field after guess is registered
         guessField.text = ""
+    }
+    func startNewGame() {
+        guess = Guess()
+        progressLabel.text = guess?.getProgressString()
+        hangmanImage.image = #imageLiteral(resourceName: "hangman0")
+        incorrectGuessesLabel.text = guess?.getIncorrectGuesses()
+    }
+    @IBAction func restartButtonPressed(_ sender: UIButton) {
+        startNewGame()
     }
 }
 
