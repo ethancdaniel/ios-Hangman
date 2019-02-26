@@ -23,7 +23,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsU-1e-JU8">
                                         <rect key="frame" x="309" y="0.0" width="50" height="30"/>
-                                        <state key="normal" title="Restart"/>
+                                        <state key="normal" title="Restart">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.060358078400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="restartButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zuW-Vd-Z3j"/>
                                         </connections>
