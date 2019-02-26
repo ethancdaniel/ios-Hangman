@@ -55,8 +55,10 @@ class HangmanViewController: UIViewController {
                         }
                     }
                 } else {
-                    // TODO
                     // tell user that they already guessed this letter
+                    let alert = UIAlertController(title: "You have already guess that letter.", message: "Please guess another letter.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Yes", style: .default))
+                    self.present(alert, animated: true)
                 }
             }
         }
