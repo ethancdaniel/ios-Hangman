@@ -19,9 +19,9 @@ class Guess {
         incorrectGuesses = []
         let path = Bundle.main.path(forResource: "phrases", ofType: "plist")
         phrases = NSArray.init(contentsOfFile: path!)
-        var newPhrase: String = phrases![Int.random(in: 0...phrases.count)] as! String
+        var newPhrase: String = phrases![Int.random(in: 0..<phrases.count)] as! String
         while newPhrase == phrase {
-            newPhrase = phrases[Int.random(in: 0...phrases.count)] as! String
+            newPhrase = phrases[Int.random(in: 0..<phrases.count)] as! String
         }
         phrase = newPhrase
     }
