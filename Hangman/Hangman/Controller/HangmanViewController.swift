@@ -20,6 +20,7 @@ class HangmanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startNewGame()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.jpg")!)
     }
     
     @IBAction func guessButtonPressed(_ sender: UIButton) {
